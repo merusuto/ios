@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSPatch/JSPatch.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RESideMenu/RESideMenu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Reachability/Reachability.framework"
@@ -95,6 +96,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSPatch/JSPatch.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RESideMenu/RESideMenu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Reachability/Reachability.framework"

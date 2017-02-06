@@ -43,6 +43,7 @@ func getIsPortrait() -> Bool {
 public let IMAGE_SCALE_SCROLLVIEW_ZOOMING = "image.scale.scrollview.zooming"
 public let ROOT_SHOW_LOADING = "root.show.loading"
 public let ROOT_HIDE_LOADING = "root.hide.loading"
+public let PATCH_COMPLETE = "patch.complete"
 
 func postShowLoading() {
 	NotificationCenter.default.post(name: NSNotification.Name(rawValue: ROOT_SHOW_LOADING), object: nil)

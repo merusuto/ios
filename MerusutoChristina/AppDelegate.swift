@@ -11,6 +11,8 @@ import AVOSCloud
 import Reachability
 import SwiftyJSON
 import SDWebImage
+import JSPatch
+import JSPatchPlatform
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +20,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
-        AVOSCloud.setApplicationId("ixeo5jke9wy1vvvl3lr06uqy528y1qtsmmgsiknxdbt2xalg",
-                                   clientKey: "hwud6pxjjr8s46s9vuix0o8mk0b5l8isvofomjwb5prqyyjg")
+
+        JSPatch.setupCallback { (type: JPCallbackType, info: [AnyHashable: Any]?, error: Error?) in
+            print("jspatch callback")
+            print(type)
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+
+            
+            switch type {
+            case .condition:
+                print("条件下载")
+
+            case .gray:
+                print("灰度下载")
+
+            case .runScript:
+                print("执行脚本")
+                for value in info!
+                {
+                    print(value)
+                }
+                
+                if let value = info?["scriptData"] {
+                    let string:String = String.init(data: value as! Data, encoding: String.Encoding.utf8)!
+                    print("新脚本内容：\n", string)
+                }
+                NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: PATCH_COMPLETE), object: nil)
+                
+            case .unknow:
+                print("未知")
+                
+            case .update:
+                print("更新脚本")
+                
+            case .updateDone:
+                print("更新完成")
+                
+            case .updateFail:
+                print("更新失败")
+
+            }
+            
+            
+        }
+
+        JSPatch.start(withAppKey: "daa229735e62bcf1")
+//        JSPatch.setupDevelopment()
+        JSPatch.sync()
 
         return true
     }
@@ -28,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("applicationWillEnterForeground")
 
     }
-    
+
     func applicationDidEnterBackground(_ application: UIApplication) {
         print("applicationDidEnterBackground")
 
@@ -37,11 +88,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
 
     }
-    
+
     func applicationWillResignActive(_ application: UIApplication) {
 
     }
-    
+
     func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
         print("内存警告，清除图片缓存")
         SDWebImageManager.shared().imageCache?.clearMemory()

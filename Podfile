@@ -14,4 +14,7 @@ target 'MerusutoChristina' do
   #pod 'SnapKit', '~> 0.19.1'
   pod 'SnapKit'
   pod 'YYKit'
+  pod 'JSPatchPlatform'
+  pod 'JSPatch/Extensions'
+  pod 'JSPatch/JPCFunction'
 end

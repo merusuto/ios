@@ -9,6 +9,8 @@ import UIKit
 import ActionSheetPicker_3_0
 import SDWebImage
 import RESideMenu
+import JSPatch
+import JSPatchPlatform
 
 class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate, RESideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -51,6 +53,14 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
         initOtherButton()
 
         loadData()
+        
+        NotificationCenter.default.addObserver(self, selector:#selector(CharacterListController.patch_handler(note:)), name: NSNotification.Name(rawValue: PATCH_COMPLETE), object: nil)
+    }
+    
+    func patch_handler(note: NSNotification) {
+        DispatchQueue.main.async {
+            self.loadData()
+        }
     }
 
     func initTableView() {

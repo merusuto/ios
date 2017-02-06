@@ -3,7 +3,7 @@ import SwiftyJSON
 import Reachability
 import SystemConfiguration
 
-class DataManager {
+class DataManager: NSObject {
 
     static var switchToReserve = false
 
@@ -121,23 +121,9 @@ class DataManager {
         return baseURL.appendingPathComponent(key)
     }
 
-    class func getGithubURL(_ key: String) -> URL {
-        let baseURL: URL!
-
-        //		if (switchToReserve)
-        //		{
-        //        baseURL = URL(string: "http://bbtfr.github.io/MerusutoChristina/data/")!
-        baseURL = URL(string: "http://rhym997.oschina.io/merusuto/data/")!
-        //
-        //		}
-        //		else
-        //		{
-        //			baseURL = NSURL(string: "http://merusuto.coding.me/data/")!
-        //		}
-        //		let baseURL = NSURL(string: "http://bbtfr.github.io/MerusutoChristina/data/")!
-        //        let baseURL = NSURL(string: "http://merusuto.coding.me/data/")!
-        //		return baseURL.URLByAppendingPathComponent(key as String)
-        return baseURL.appendingPathComponent(key)
+    //此地址可以用JSPatch来修改，避免小伙伴们又换服务器地址
+    dynamic class func getGithubURL(_ key: String) -> URL {
+        return URL(string: "https://merusuto.oschina.io/data/")!.appendingPathComponent(key)
     }
 
     class func loadDataFromURL(url: URL, completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
