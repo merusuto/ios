@@ -27,7 +27,7 @@ func getStringWidth(value: String, font: UIFont) -> CGFloat {
 	let temp: NSString = NSString(string: value)
 
     let size = CGSize(width: CGFloat.greatestFiniteMagnitude, height: 1)
-	let bounds = temp.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+    let bounds = temp.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
 
 	return bounds.width
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVOSCloud
 import SDWebImage
 import MBProgressHUD
 
@@ -40,7 +39,7 @@ class CharacterDetailController: UIViewController, UIScrollViewDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		AVAnalytics.event("Open", label: "0 \(item.id)")
+//        AVAnalytics.event("Open", label: "0 \(item.id)")
 
 		scrollView = UIScrollView(frame: self.view.bounds)
 		scrollView.backgroundColor = UIColor(red: 0.139, green: 0.137, blue: 0.142, alpha: 0.9)
@@ -117,7 +116,7 @@ class CharacterDetailController: UIViewController, UIScrollViewDelegate {
 		}
 	}
 
-	func imageViewer_handler(note: NSNotification) {
+    @objc func imageViewer_handler(note: NSNotification) {
 		self.scrollView.isScrollEnabled = !imageViewer.isZoomImage
 	}
 
@@ -127,7 +126,7 @@ class CharacterDetailController: UIViewController, UIScrollViewDelegate {
 		NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: IMAGE_SCALE_SCROLLVIEW_ZOOMING), object: nil)
 	}
 
-	func tap_handler(gesture: UITapGestureRecognizer) {
+    @objc func tap_handler(gesture: UITapGestureRecognizer) {
 
 		self.dismiss(animated: true, completion: nil)
 	}

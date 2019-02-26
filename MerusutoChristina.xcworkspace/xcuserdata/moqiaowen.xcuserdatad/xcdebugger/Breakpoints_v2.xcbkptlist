@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MerusutoChristina/Character/CharacterListController.swift"
-            timestampString = "504674679.549846"
+            timestampString = "572845404.514019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "menu_handler(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -35,13 +35,77 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MerusutoChristina/AppDelegate.swift"
-            timestampString = "505294515.69091"
+            filePath = "MerusutoChristina/Units/DataManager.swift"
+            timestampString = "572845404.514452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "loadDataFromURL(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MerusutoChristina.DataManager.loadDataFromURL (url : Foundation.URL, completion : (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MerusutoChristina"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/moqiaowen/Documents/%E4%B8%AA%E4%BA%BAGit/MerusutoChristina/ios/MerusutoChristina/Units/DataManager.swift"
+                  timestampString = "508048231.03225"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MerusutoChristina.DataManager.(loadDataFromURL (url : Foundation.URL, completion : (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "MerusutoChristina"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/moqiaowen/Documents/%E4%B8%AA%E4%BA%BAGit/MerusutoChristina/ios/MerusutoChristina/Units/DataManager.swift"
+                  timestampString = "508048231.034279"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MerusutoChristina/Character/CharacterListController.swift"
+            timestampString = "572845404.5145169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "patch_handler(note:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MerusutoChristina/Units/DataManager.swift"
+            timestampString = "572845404.514823"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "loadGithubDataWithSuccess(key:success:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

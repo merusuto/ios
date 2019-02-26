@@ -11,7 +11,6 @@
 		3D238F9C1C97DF080003E90E /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D238F9B1C97DF080003E90E /* PropertyDetailView.swift */; };
 		3D3C73B71C7DE20200213B19 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C73B61C7DE20200213B19 /* MenuViewController.swift */; };
 		3D3C73C91C7DE23F00213B19 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C73C81C7DE23F00213B19 /* DataManager.swift */; };
-		3DAC12281E4818920067DA88 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 3DAC12271E4818920067DA88 /* main.js */; };
 		3DAFF5B81C91009D0035B7D9 /* CharacterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAFF5B01C91009D0035B7D9 /* CharacterDetailController.swift */; };
 		3DAFF5B91C91009D0035B7D9 /* CharacterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAFF5B11C91009D0035B7D9 /* CharacterListController.swift */; };
 		3DAFF5BA1C91009D0035B7D9 /* CharacterPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAFF5B21C91009D0035B7D9 /* CharacterPropertyView.swift */; };
@@ -27,12 +26,6 @@
 		3DCB3A171C9646740057CE66 /* MonsterPropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB3A161C9646740057CE66 /* MonsterPropertyDetailView.swift */; };
 		3DCFA8C61C7AB7860002344A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFA8C51C7AB7860002344A /* RootViewController.swift */; };
 		68963D884D39E2267218DD68 /* Pods_MerusutoChristina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D718B828DAFD98907C4F2C /* Pods_MerusutoChristina.framework */; };
-		9615C6571AA30B2400827D0C /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615C6561AA30B2400827D0C /* AVOSCloud.framework */; };
-		9615C6591AA30E9F00827D0C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615C6581AA30E9F00827D0C /* MobileCoreServices.framework */; };
-		9615C65B1AA30EB000827D0C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615C65A1AA30EB000827D0C /* SystemConfiguration.framework */; };
-		9615C65D1AA30EB900827D0C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615C65C1AA30EB900827D0C /* CoreTelephony.framework */; };
-		9615C65F1AA30EC100827D0C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615C65E1AA30EC100827D0C /* CoreLocation.framework */; };
-		9615C6611AA30ECA00827D0C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615C6601AA30ECA00827D0C /* libicucore.dylib */; };
 		9692F1071A9C7E8A00190CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692F1061A9C7E8A00190CD4 /* AppDelegate.swift */; };
 		9692F10C1A9C7E8A00190CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9692F10A1A9C7E8A00190CD4 /* Main.storyboard */; };
 		9692F10E1A9C7E8A00190CD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9692F10D1A9C7E8A00190CD4 /* Images.xcassets */; };
@@ -44,7 +37,6 @@
 		3D238F9B1C97DF080003E90E /* PropertyDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyDetailView.swift; path = ../Monster/View/PropertyDetailView.swift; sourceTree = "<group>"; };
 		3D3C73B61C7DE20200213B19 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3D3C73C81C7DE23F00213B19 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		3DAC12271E4818920067DA88 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		3DAFF5B01C91009D0035B7D9 /* CharacterDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailController.swift; sourceTree = "<group>"; };
 		3DAFF5B11C91009D0035B7D9 /* CharacterListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListController.swift; sourceTree = "<group>"; };
 		3DAFF5B21C91009D0035B7D9 /* CharacterPropertyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterPropertyView.swift; path = ../CharacterPropertyView.swift; sourceTree = "<group>"; };
@@ -60,13 +52,6 @@
 		3DCB3A161C9646740057CE66 /* MonsterPropertyDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterPropertyDetailView.swift; sourceTree = "<group>"; };
 		3DCFA8C51C7AB7860002344A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		7950F0BB5609805DDB01F90E /* Pods-MerusutoChristina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerusutoChristina.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerusutoChristina/Pods-MerusutoChristina.release.xcconfig"; sourceTree = "<group>"; };
-		9615C6561AA30B2400827D0C /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = MerusutoChristina/AVOSCloud.framework; sourceTree = "<group>"; };
-		9615C6581AA30E9F00827D0C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		9615C65A1AA30EB000827D0C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9615C65C1AA30EB900827D0C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		9615C65E1AA30EC100827D0C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		9615C6601AA30ECA00827D0C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		963D1B9D1AD0234000BDD532 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgingHeader.h; path = ../BridgingHeader.h; sourceTree = "<group>"; };
 		9659BA1E1AD020BA00C0EB8F /* MerusutoChristina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerusutoChristina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9692F1051A9C7E8A00190CD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9692F1061A9C7E8A00190CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,12 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9615C6611AA30ECA00827D0C /* libicucore.dylib in Frameworks */,
-				9615C65F1AA30EC100827D0C /* CoreLocation.framework in Frameworks */,
-				9615C65D1AA30EB900827D0C /* CoreTelephony.framework in Frameworks */,
-				9615C65B1AA30EB000827D0C /* SystemConfiguration.framework in Frameworks */,
-				9615C6591AA30E9F00827D0C /* MobileCoreServices.framework in Frameworks */,
-				9615C6571AA30B2400827D0C /* AVOSCloud.framework in Frameworks */,
 				68963D884D39E2267218DD68 /* Pods_MerusutoChristina.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,13 +91,6 @@
 				3DAFF5BE1C9100A60035B7D9 /* PickerItem.swift */,
 			);
 			path = BaseClass;
-			sourceTree = "<group>";
-		};
-		3D3C73AE1C7DDCBF00213B19 /* Simulator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Simulator;
 			sourceTree = "<group>";
 		};
 		3D3C73B51C7DE20200213B19 /* Menu */ = {
@@ -197,7 +169,6 @@
 		9692F0F81A9C7E8900190CD4 = {
 			isa = PBXGroup;
 			children = (
-				3DAC12271E4818920067DA88 /* main.js */,
 				9692F1031A9C7E8A00190CD4 /* MerusutoChristina */,
 				D6E9AAFCB93E46DF6518D1D0 /* Frameworks */,
 				9659BA1E1AD020BA00C0EB8F /* MerusutoChristina.app */,
@@ -213,7 +184,6 @@
 				3D1E17EC1C8AC054008F808E /* BaseClass */,
 				3D3C73C71C7DE23F00213B19 /* Units */,
 				3D3C73B51C7DE20200213B19 /* Menu */,
-				3D3C73AE1C7DDCBF00213B19 /* Simulator */,
 				9692F1061A9C7E8A00190CD4 /* AppDelegate.swift */,
 				3D1E17EF1C8ACAA8008F808E /* SwiftPerfix.swift */,
 				3DCFA8C51C7AB7860002344A /* RootViewController.swift */,
@@ -228,7 +198,6 @@
 		9692F1041A9C7E8A00190CD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				963D1B9D1AD0234000BDD532 /* BridgingHeader.h */,
 				9692F1051A9C7E8A00190CD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -237,12 +206,6 @@
 		D6E9AAFCB93E46DF6518D1D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9615C6601AA30ECA00827D0C /* libicucore.dylib */,
-				9615C65E1AA30EC100827D0C /* CoreLocation.framework */,
-				9615C65C1AA30EB900827D0C /* CoreTelephony.framework */,
-				9615C65A1AA30EB000827D0C /* SystemConfiguration.framework */,
-				9615C6581AA30E9F00827D0C /* MobileCoreServices.framework */,
-				9615C6561AA30B2400827D0C /* AVOSCloud.framework */,
 				F6D718B828DAFD98907C4F2C /* Pods_MerusutoChristina.framework */,
 			);
 			name = Frameworks;
@@ -260,7 +223,6 @@
 				9692F0FE1A9C7E8900190CD4 /* Frameworks */,
 				9692F0FF1A9C7E8900190CD4 /* Resources */,
 				447612F5F40456A96015489B /* [CP] Embed Pods Frameworks */,
-				F8A5A39F96D3D0CBAC14D1CF /* [CP] Copy Pods Resources */,
 				3D275E481E1E3DE7009CF3D4 /* ShellScript */,
 			);
 			buildRules = (
@@ -312,7 +274,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DAC12281E4818920067DA88 /* main.js in Resources */,
 				9692F10C1A9C7E8A00190CD4 /* Main.storyboard in Resources */,
 				9692F1111A9C7E8A00190CD4 /* LaunchScreen.xib in Resources */,
 				9692F10E1A9C7E8A00190CD4 /* Images.xcassets in Resources */,
@@ -341,13 +302,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MerusutoChristina/Pods-MerusutoChristina-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RESideMenu/RESideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLiteKit/SwiftLiteKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RESideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLiteKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MerusutoChristina/Pods-MerusutoChristina-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MerusutoChristina/Pods-MerusutoChristina-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F83645F1187E34C0B978427A /* [CP] Check Pods Manifest.lock */ = {
@@ -356,28 +336,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MerusutoChristina-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F8A5A39F96D3D0CBAC14D1CF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MerusutoChristina/Pods-MerusutoChristina-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -522,7 +490,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC8FE3712A82D9687EBBCD98 /* Pods-MerusutoChristina.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -535,17 +503,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MerusutoChristina/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.msw.MerusutoChristina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BridgingHeader.h";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -553,7 +521,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7950F0BB5609805DDB01F90E /* Pods-MerusutoChristina.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -566,7 +534,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MerusutoChristina/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				New_Setting = "";
@@ -575,10 +543,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BridgingHeader.h";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Release;
 		};

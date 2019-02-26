@@ -55,15 +55,15 @@ class RootViewController: RESideMenu, SDWebImagePrefetcherDelegate {
         hud.addGestureRecognizer(hudTapGesture)
         self.view.addSubview(hud!)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(RootViewController.background_handler(sender:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(RootViewController.background_handler(sender:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(RootViewController.background_handler(sender:)), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(RootViewController.background_handler(sender:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
 
         NotificationCenter.default.addObserver(self, selector: #selector(RootViewController.loading_handler(sender:)), name: NSNotification.Name(rawValue: ROOT_SHOW_LOADING), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(RootViewController.loading_handler(sender:)), name: NSNotification.Name(rawValue: ROOT_HIDE_LOADING), object: nil)
 
     }
 
-    func loading_handler(sender: NSNotification) {
+    @objc func loading_handler(sender: NSNotification) {
         print(sender.name)
         if sender.name == NSNotification.Name(rawValue: ROOT_SHOW_LOADING) {
             hud.mode = MBProgressHUDMode.indeterminate
@@ -82,9 +82,9 @@ class RootViewController: RESideMenu, SDWebImagePrefetcherDelegate {
         }
     }
 
-    func background_handler(sender: AnyObject) {
+    @objc func background_handler(sender: AnyObject) {
 
-        if sender.name == NSNotification.Name.UIApplicationDidEnterBackground {
+        if sender.name == UIApplication.didEnterBackgroundNotification {
             SDWebImagePrefetcher.shared().cancelPrefetching()
             self.hud.hide(false)
 
@@ -98,10 +98,10 @@ class RootViewController: RESideMenu, SDWebImagePrefetcherDelegate {
 
     deinit {
 
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
     }
 
-    func hud_clickHandler(sender: UITapGestureRecognizer) {
+    @objc func hud_clickHandler(sender: UITapGestureRecognizer) {
         self.isBackgroundDownloading = true
         self.hud.hide(true)
         self.hud.isUserInteractionEnabled = false

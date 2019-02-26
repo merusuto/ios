@@ -70,7 +70,7 @@ class ImageViewer: UIScrollView, UIScrollViewDelegate {
         self.delegate = self
 
         self.imageView = UIImageView()
-        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        imageView.contentMode = .scaleAspectFit
         self.addSubview(imageView)
 
         self.hud = MBProgressHUD(view: self)

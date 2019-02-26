@@ -40,7 +40,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 	{
 		super.viewDidLoad()
 
-		self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * 0.6, height: UIScreen.main.bounds.height), style: UITableViewStyle.plain)
+        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * 0.6, height: UIScreen.main.bounds.height), style: UITableView.Style.plain)
         self.tableView?.center = CGPoint(x: tableView!.center.x, y: UIScreen.main.bounds.height / 2 + 20)
 
 //		self.titles = [[title1, title2], [title3, title4, title5], [title6]]
@@ -50,7 +50,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 		self.tableView?.dataSource = self
 
 		self.tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "test")
-		self.tableView?.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0)
+        self.tableView?.separatorInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
 		self.tableView?.tableFooterView = UIView(frame: CGRect())
 		self.tableView?.isScrollEnabled = false
 
@@ -109,8 +109,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             mainController.clearAllResource()
             
         case MenuList.Help:
-            UIApplication.shared.openURL(URL(string: "http://bbtfr.github.io/MerusutoChristina/jump/about.html")!)
-//        default:
-//            break
+            UIApplication.shared.open(URL(string: "https://merusuto.github.io/readme/")!, options: [:], completionHandler: nil)
         }
     }}

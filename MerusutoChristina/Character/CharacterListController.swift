@@ -9,8 +9,6 @@ import UIKit
 import ActionSheetPicker_3_0
 import SDWebImage
 import RESideMenu
-import JSPatch
-import JSPatchPlatform
 
 class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate, RESideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -57,14 +55,14 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
         NotificationCenter.default.addObserver(self, selector:#selector(CharacterListController.patch_handler(note:)), name: NSNotification.Name(rawValue: PATCH_COMPLETE), object: nil)
     }
     
-    func patch_handler(note: NSNotification) {
+    @objc func patch_handler(note: NSNotification) {
         DispatchQueue.main.async {
             self.loadData()
         }
     }
 
     func initTableView() {
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), style: UITableViewStyle.plain)
+        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), style: .plain)
         self.tableView.register(CharacterListCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
         self.view.addSubview(self.tableView)
         self.tableView.delegate = self
@@ -81,10 +79,10 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
     }
 
     func initOtherButton() {
-        self.btnScrollToTop = UIButton(type: UIButtonType.system)
+        self.btnScrollToTop = UIButton(type: .system)
         self.btnScrollToTop.alpha = 0
-        self.btnScrollToTop.setTitle("回到顶部", for: UIControlState.normal)
-        self.btnScrollToTop.addTarget(self, action:#selector(CharacterListController.btnScrollToTop_clickHandler(sender:)), for: UIControlEvents.touchUpInside)
+        self.btnScrollToTop.setTitle("回到顶部", for: .normal)
+        self.btnScrollToTop.addTarget(self, action:#selector(CharacterListController.btnScrollToTop_clickHandler(sender:)), for: .touchUpInside)
         self.view.addSubview(self.btnScrollToTop)
         self.btnScrollToTop.snp.makeConstraints {[unowned self] (make) -> Void in
             make.bottom.equalTo(self.view.snp.bottom).offset(-8)
@@ -102,19 +100,19 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
 
     func initNavigationBarButtonItem() {
         
-        self.btnLevel = UIBarButtonItem(title: "等级", style: UIBarButtonItemStyle.plain, target: self, action:#selector(CharacterListController.barButton_clickHandler(sender:)))
-        self.btnFilter = UIBarButtonItem(title: "筛选", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CharacterListController.barButton_clickHandler(sender:)))
-        self.btnSort = UIBarButtonItem(title: "排序", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CharacterListController.barButton_clickHandler(sender:)))
+        self.btnLevel = UIBarButtonItem(title: "等级", style: .plain, target: self, action:#selector(CharacterListController.barButton_clickHandler(sender:)))
+        self.btnFilter = UIBarButtonItem(title: "筛选", style: .plain, target: self, action: #selector(CharacterListController.barButton_clickHandler(sender:)))
+        self.btnSort = UIBarButtonItem(title: "排序", style: .plain, target: self, action: #selector(CharacterListController.barButton_clickHandler(sender:)))
         
-        self.btnCancel = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.plain, target: self, action:#selector(CharacterListController.btnCancel_handler(sender:)))
-        self.btnDone = UIBarButtonItem(title: "确定", style: UIBarButtonItemStyle.plain, target: self, action:#selector(CharacterListController.btnDone_handle(sender:)))
+        self.btnCancel = UIBarButtonItem(title: "取消", style: .plain, target: self, action:#selector(CharacterListController.btnCancel_handler(sender:)))
+        self.btnDone = UIBarButtonItem(title: "确定", style: .plain, target: self, action:#selector(CharacterListController.btnDone_handle(sender:)))
         
 
         self.btnSort.tag = 1
         self.btnLevel.tag = 0
         self.btnFilter.tag = 2
 
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_drawer"), style: UIBarButtonItemStyle.done, target: self, action: #selector(CharacterListController.menu_handler(sender:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_drawer"), style: UIBarButtonItem.Style.done, target: self, action: #selector(CharacterListController.menu_handler(sender:)))
         self.navigationItem.rightBarButtonItems = [self.btnFilter, self.btnSort, self.btnLevel]
     }
 
@@ -136,7 +134,7 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
         })
     }
 
-    func menu_handler(sender: AnyObject) {
+    @objc func menu_handler(sender: AnyObject) {
         self.sideMenuViewController.presentLeftMenuViewController()
     }
 
@@ -201,7 +199,7 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
         }
     }
 
-    func barButton_clickHandler(sender: UIBarButtonItem) {
+    @objc func barButton_clickHandler(sender: UIBarButtonItem) {
         for picker in pickers {
             picker.originalValue = picker.value
         }
@@ -234,7 +232,7 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
         actionSheetPickerShown = false
     }
 
-    func btnScrollToTop_clickHandler(sender: AnyObject?) {
+    @objc func btnScrollToTop_clickHandler(sender: AnyObject?) {
         self.tableView.setContentOffset(CGPoint(), animated: true)
     }
 
@@ -334,7 +332,7 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
         }
     }
 
-    func btnCancel_handler(sender: AnyObject?) {
+    @objc func btnCancel_handler(sender: AnyObject?) {
         for picker in pickers {
             picker.value = picker.originalValue
         }
@@ -345,7 +343,7 @@ class CharacterListController: UIViewController, ActionSheetCustomPickerDelegate
         btnDone_handle(sender: nil)
     }
 
-    func btnDone_handle(sender: AnyObject?) {
+    @objc func btnDone_handle(sender: AnyObject?) {
         var items = allItems
         updateLevelMode(items: items)
         items = filter(items)
