@@ -9,13 +9,13 @@
 import UIKit
 
 class PropertyDetailView: UIScrollView {
+    var item: CharacterItem!
 
+    func setFontSize(value: CGFloat) {
+        print("需要子类实现")
+    }
 
-    var item:CharacterItem!
-    
-	func setFontSize(value: CGFloat) {
-	}
-
-	func setConstraints() {
-	}
+    func setConstraints() {
+        print("需要子类实现")
+    }
 }

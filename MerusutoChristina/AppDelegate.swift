@@ -10,12 +10,14 @@ import Reachability
 import SDWebImage
 import SwiftyJSON
 import UIKit
+import Bugly
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        Bugly.start(withAppId: "faba2b868f")
         return true
     }
 
@@ -37,7 +39,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("内存警告，清除图片缓存")
         SDWebImageManager.shared().imageCache?.clearMemory()
         SDImageCache.shared().clearMemory()
-        print(SDWebImageManager.shared().imageCache == SDImageCache.shared())
-        print(SDWebImageManager.shared().imageCache === SDImageCache.shared())
     }
 }

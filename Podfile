@@ -11,5 +11,6 @@ target 'MerusutoChristina' do
   pod 'RESideMenu', '~> 4.0.7'
   pod 'SnapKit'
   pod 'YYKit'
-  pod 'SwiftLiteKit'
+  pod 'Closures'
+  pod 'Bugly'
 end

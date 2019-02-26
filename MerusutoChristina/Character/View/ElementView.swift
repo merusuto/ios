@@ -30,7 +30,7 @@ class ElementView: UIView {
         let center = CGPoint(x: rect.origin.x + rect.width / 2, y: rect.origin.y + rect.height / 2)
         context.setFillColor(color.cgColor)
         for i in 0 ... 4 {
-            let angle = CGFloat((Double(i) * 72 - 90) * M_PI * 2 / 360)
+            let angle = CGFloat((Double(i) * 72 - 90) * .pi * 2 / 360)
             let x = center.x + radius * cos(angle)
             let y = center.y + radius * sin(angle)
             let point = CGPoint(x: x, y: y)
@@ -48,7 +48,7 @@ class ElementView: UIView {
         for i in 0 ... 4 {
             let color = UIColorFromRGBA(rgbValue: [0xffe74c3c, 0xff3498db, 0xff2ecc71, 0xfff1c40f, 0xff9b59b6][i])
             context.setFillColor(color.cgColor)
-            let angle = CGFloat((Double(i) * 72 - 90) * M_PI * 2 / 360)
+            let angle = CGFloat((Double(i) * 72 - 90) * .pi * 2 / 360)
             let x = center.x + radius * cos(angle)
             let y = center.y + radius * sin(angle)
             let circleRect = CGRect(x: x - r, y: y - r, width: 2 * r, height: 2 * r)
@@ -75,7 +75,7 @@ class ElementView: UIView {
             let color = UIColorFromRGBA(rgbValue: [0, 0x80e74c3c, 0x803498db, 0x802ecc71, 0x80f1c40f, 0x809b59b6][item.element])
             context.setFillColor(color.cgColor)
             for i in 0 ... 4 {
-                let angle = CGFloat((Double(i) * 72 - 90) * M_PI * 2 / 360)
+                let angle = CGFloat((Double(i) * 72 - 90) * .pi * 2 / 360)
                 let x = center.x + radius * cos(angle) * CGFloat(elements[i]) / 2
                 let y = center.y + radius * sin(angle) * CGFloat(elements[i]) / 2
                 let point = CGPoint(x: x, y: y)

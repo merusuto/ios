@@ -10,7 +10,7 @@ import Foundation
 
 func getStringValue(data: JSON, key: String) -> String {
     let value = data[key].stringValue as String
-    return value.characters.count == 0 ? "暂缺" : value
+    return value.count == 0 ? "暂缺" : value
 }
 
 class CharacterItem {
@@ -115,7 +115,7 @@ class CharacterItem {
 
         
         //TODO: - 要检查这里
-        if remark.characters.count > 0 {
+        if remark.count > 0 {
 //            let startIndex = remark.startIndex
 //            let endIndex = remark.startIndex.advancedBy(1)
 //

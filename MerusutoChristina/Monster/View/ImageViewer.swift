@@ -6,12 +6,11 @@
 //  Copyright © 2016年 bbtfr. All rights reserved.
 //
 
-import UIKit
 import MBProgressHUD
 import SDWebImage
+import UIKit
 
 class ImageViewer: UIScrollView, UIScrollViewDelegate {
-
     var hud: MBProgressHUD!
 
     var isZoomImage: Bool = false
@@ -22,40 +21,38 @@ class ImageViewer: UIScrollView, UIScrollViewDelegate {
 
     var imageUrl: URL! {
         didSet {
-
             print("imageUrl didSet")
             self.hud.show(true)
-            
 
-            self.imageView.sd_setImage(with: imageUrl as URL!, placeholderImage: nil, options: [SDWebImageOptions.progressiveDownload, SDWebImageOptions.retryFailed], progress: {
-                (receivedSize: Int, totalSize: Int, _) -> Void in
+            self.imageView.sd_setImage(with: imageUrl,
+                                       placeholderImage: nil,
+                                       options: [.progressiveDownload, .retryFailed],
+                                       progress: { (receivedSize: Int, totalSize: Int, _) -> Void in
 
-                // 计算下载进度
-                // print("id:\(self.item.id) \(receivedSize)/\(totalSize)")
-                self.hud.progress = (Float(receivedSize) / Float(totalSize))
+                                           // 计算下载进度
+                                           // print("id:\(self.item.id) \(receivedSize)/\(totalSize)")
+                                           self.hud.progress = (Float(receivedSize) / Float(totalSize))
 
-            }, completed: {
+                                       },
+                                       completed: { (image, error, _, _) -> Void in
 
-                (image: UIImage?, error: Error?, type, url: URL?) -> Void in
+                                           print("\(String(describing: image)) \(String(describing: self.imageUrl))")
+                                           if error != nil || image == nil {
+                                               self.hud.labelText = "加载失败..."
+                                               print("网络错误 \(String(describing: error))")
+                                               return
+                                           }
 
-                print("\(#function) \(image) \(self.imageUrl)")
-                if error != nil || image == nil {
-                    self.hud.labelText = "加载失败..."
-                    print("网络错误 \(error)")
-                    return
-                }
+                                           self.imageView.image = image
+                                           self.imageView.frame = CGRect(x: 0, y: 0, width: image!.size.width, height: image!.size.height)
 
-                self.imageView.image = image
-                //				self.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height)
-                self.imageView.frame = CGRect(x: 0, y: 0, width: image!.size.width, height: image!.size.height)
+                                           self.calculateImageViewFrame()
 
-                self.calculateImageViewFrame()
+                                           self.hud.hide(true)
 
-                self.hud.hide(true)
-
-                UIView.animate(withDuration: 0.25, animations: { () -> Void in
-                    self.imageView.alpha = 1
-                })
+                                           UIView.animate(withDuration: 0.25) { () -> Void in
+                                               self.imageView.alpha = 1
+                                           }
             })
         }
     }
@@ -70,20 +67,20 @@ class ImageViewer: UIScrollView, UIScrollViewDelegate {
         self.delegate = self
 
         self.imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        self.addSubview(imageView)
+        self.imageView.contentMode = .scaleAspectFit
+        self.addSubview(self.imageView)
 
         self.hud = MBProgressHUD(view: self)
         self.hud.labelText = "立绘加载中..."
-        self.hud.mode = MBProgressHUDMode.determinate
-        self.hud.backgroundColor = UIColor.clear
+        self.hud.mode = .determinate
+        self.hud.backgroundColor = .clear
         self.hud.color = UIColor.clear
-        self.addSubview(hud)
+        self.addSubview(self.hud)
         self.hud.hide(false)
     }
 
     func calculateImageViewFrame() {
-        if imageView.image == nil {
+        if self.imageView.image == nil {
             return
         }
 
@@ -106,24 +103,19 @@ class ImageViewer: UIScrollView, UIScrollViewDelegate {
     }
 
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
-        
-        isZoomImage = false
+        self.isZoomImage = false
 
         self.bounces = true
 
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: IMAGE_SCALE_SCROLLVIEW_ZOOMING), object: self)
     }
 
-    
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-
-        centerScrollViewContents()
+        self.centerScrollViewContents()
     }
-    
 
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-
-        isZoomImage = self.zoomScale != self.minimumZoomScale
+        self.isZoomImage = self.zoomScale != self.minimumZoomScale
 
         self.bounces = isZoomImage
 
@@ -148,5 +140,4 @@ class ImageViewer: UIScrollView, UIScrollViewDelegate {
 
         self.imageView.frame = contentsFrame
     }
-
 }
